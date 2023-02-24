@@ -1,0 +1,119 @@
+gms site->id
+gms shift->gms shift siteid is gms site id
+gms shift log->id,shift_id,shift_userid
+gms shift employee->id,shift_id,site_id,emp_id
+gms employee->gms user id is gms employee user_id
+gms user >id
+
+
+
+
+Admin@Admin-PC MINGW64 /f/xampp_dvc/htdocs/datavoice/inventorymanagement/inventory_management (inventory_thirdeye)
+$ git commit -m 'bugs fixed'
+[inventory_thirdeye 43a0fc1] bugs fixed
+ 10 files changed, 74 insertions(+), 16 deletions(-)
+
+Admin@Admin-PC MINGW64 /f/xampp_dvc/htdocs/datavoice/inventorymanagement/inventory_management (inventory_thirdeye)
+$ git push
+Enumerating objects: 42, done.
+Counting objects: 100% (42/42), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (24/24), done.
+Writing objects: 100% (24/24), 6.28 KiB | 378.00 KiB/s, done.
+Total 24 (delta 18), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create pull request for inventory_thirdeye:
+remote:   https://bitbucket.org/datavoice/inventorymanagement/pull-requests/new?source=inventory_thirdeye&t=1
+remote:
+To https://bitbucket.org/datavoice/inventorymanagement.git
+   c851d74..43a0fc1  inventory_thirdeye -> inventory_thirdeye
+
+Admin@Admin-PC MINGW64 /f/xampp_dvc/htdocs/datavoice/inventorymanagement/inventory_management (inventory_thirdeye)
+$ git pull origin inventory_thirdeye
+From https://bitbucket.org/datavoice/inventorymanagement
+ * branch            inventory_thirdeye -> FETCH_HEAD
+Already up to date.
+
+Admin@Admin-PC MINGW64 /f/xampp_dvc/htdocs/datavoice/inventorymanagement/inventory_management (inventory_thirdeye)
+$ git checkout
+FETCH_HEAD                  inventory_bkp               inventory_release           master                      origin/inventory_jeswill    origin/inventory_thirdeye   thirdeye_work
+HEAD                        inventory_bkp_thideye       inventory_staging           origin/HEAD                 origin/inventory_release    origin/master
+ORIG_HEAD                   inventory_jeswill           inventory_thirdeye          origin/inventory_bkp        origin/inventory_staging    origin/thirdeye_work
+
+Admin@Admin-PC MINGW64 /f/xampp_dvc/htdocs/datavoice/inventorymanagement/inventory_management (inventory_thirdeye)
+$ git checkout inventory_staging
+Switched to branch 'inventory_staging'
+M       inventory_management/composer.json
+M       inventory_management/composer.lock
+D       inventory_management/database/migrations/2023_01_31_045853_add_attachments_transaction_id_table.php
+Your branch is up to date with 'origin/inventory_staging'.
+
+Admin@Admin-PC MINGW64 /f/xampp_dvc/htdocs/datavoice/inventorymanagement/inventory_management (inventory_staging)
+$ git pull
+Already up to date.
+
+Admin@Admin-PC MINGW64 /f/xampp_dvc/htdocs/datavoice/inventorymanagement/inventory_management (inventory_staging)
+$ git merge inventory_thirdeye
+Merge made by the 'ort' strategy.
+ .../app/Http/Controllers/RoleController.php        |  1 +
+ .../app/Http/Controllers/VendorController.php      | 12 ++++++++++
+ .../resources/views/damaged_items/index.blade.php  | 12 ++++++++--
+ .../resources/views/employee/create.blade.php      | 21 +++++++++++------
+ .../resources/views/employee/edit.blade.php        |  5 ++++
+ .../resources/views/employee/index.blade.php       | 10 ++++++--
+ .../resources/views/layouts/app.blade.php          |  2 +-
+ .../resources/views/product/create.blade.php       |  1 +
+ .../resources/views/product/edit.blade.php         |  3 ---
+ .../resources/views/product/index.blade.php        |  9 ++++++--
+ .../resources/views/purchase/index.blade.php       | 10 ++++++--
+ .../resources/views/role/create.blade.php          | 27 ++++++++++++++++++++--
+ .../resources/views/role/index.blade.php           |  4 ++--
+ .../views/sales_transaction/index.blade.php        | 12 ++++++++--
+ .../resources/views/vendor/create.blade.php        | 16 ++++++-------
+ 15 files changed, 112 insertions(+), 33 deletions(-)
+
+Admin@Admin-PC MINGW64 /f/xampp_dvc/htdocs/datavoice/inventorymanagement/inventory_management (inventory_staging)
+$ git push
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 516 bytes | 516.00 KiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create pull request for inventory_staging:
+remote:   https://bitbucket.org/datavoice/inventorymanagement/pull-requests/new?source=inventory_staging&t=1
+remote:
+To https://bitbucket.org/datavoice/inventorymanagement.git
+   2b647bf..e84635a  inventory_staging -> inventory_staging
+
+Admin@Admin-PC MINGW64 /f/xampp_dvc/htdocs/datavoice/inventorymanagement/inventory_management (inventory_staging)
+$ git checkout inventory_thirdeye
+Switched to branch 'inventory_thirdeye'
+M       inventory_management/composer.json
+M       inventory_management/composer.lock
+D       inventory_management/database/migrations/2023_01_31_045853_add_attachments_transaction_id_table.php
+Your branch is up to date with 'origin/inventory_thirdeye'.
+
+Admin@Admin-PC MINGW64 /f/xampp_dvc/htdocs/datavoice/inventorymanagement/inventory_management (inventory_thirdeye)
+$ git pull origin inventory_staging
+From https://bitbucket.org/datavoice/inventorymanagement
+ * branch            inventory_staging -> FETCH_HEAD
+Updating 43a0fc1..e84635a
+Fast-forward
+ inventory_management/resources/views/category/index.blade.php | 7 ++++---
+ 1 file changed, 4 insertions(+), 3 deletions(-)
+
+Admin@Admin-PC MINGW64 /f/xampp_dvc/htdocs/datavoice/inventorymanagement/inventory_management (inventory_thirdeye)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create pull request for inventory_thirdeye:
+remote:   https://bitbucket.org/datavoice/inventorymanagement/pull-requests/new?source=inventory_thirdeye&t=1
+remote:
+To https://bitbucket.org/datavoice/inventorymanagement.git
+   43a0fc1..e84635a  inventory_thirdeye -> inventory_thirdeye
+
+Admin@Admin-PC MINGW64 /f/xampp_dvc/htdocs/datavoice/inventorymanagement/inventory_management (inventory_thirdeye)
+$
+
